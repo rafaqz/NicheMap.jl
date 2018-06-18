@@ -82,7 +82,7 @@ niche_setup(height) = begin
         if upper > height
             lower = nichemap_increments[i - 1]
             p = (height-lower)/(upper-lower)
-            return Interp(i + 1, i + 2, p, 1.0 - p)
+            return NicheInterp(i + 1, i + 2, p, 1.0 - p)
         end
     end
     # Otherwise its taller/deeper than we have data, use the largest we have.
